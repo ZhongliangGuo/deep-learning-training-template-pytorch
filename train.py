@@ -21,13 +21,13 @@ if __name__ == '__main__':
     debug_mode = False  # when turn on the debug mode, code will not create checkpoints (including create folders)
     print('the code will run in debug mode') if debug_mode else None
     # define pushover client
-    client = Client(config_path='/home/zg34/Documents/app_configs/pushover.conf', profile='S22U')
+    client = Client(config_path='/home/xxx/pushover.conf', profile='xxx')
     # use try-except, if the code experienced a crash, send a notification to mobile phone
     try:
         device = 'cuda' if torch.cuda.is_available() else 'cpu'  # run on gpu if possible
         print('the code will run on {}'.format(device))
         # region Hyperparameters. get hyperparameters from config file and put those parameters in the variable "args"
-        config_path = r'/home/zg34/Desktop/SignatureVerification/configs/config.json'
+        config_path = r'/home/xxxx/config.json'
         parser = ArgumentParser()
         with open(config_path, 'r') as f:
             d = json.load(f)
